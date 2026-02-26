@@ -34,9 +34,19 @@ class AppointmentCard extends StatelessWidget{
                         appointment.doctorName,
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        appointment.specialization,
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 2,horizontal: 8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: Text(
+                          appointment.specialization,
+                          style: TextStyle(
+                            fontSize: 14, 
+                            color: Colors.black
+                          ),
+                        ),
                       ),
                     ],
                   ),

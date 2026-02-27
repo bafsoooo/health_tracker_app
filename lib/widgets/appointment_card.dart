@@ -32,7 +32,7 @@ class AppointmentCard extends StatelessWidget{
                     children: [
                       Text(
                         appointment.doctorName,
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
                       ),
                       Container(
                         padding: EdgeInsets.symmetric(vertical: 2,horizontal: 8.0),
@@ -44,7 +44,8 @@ class AppointmentCard extends StatelessWidget{
                           appointment.specialization,
                           style: TextStyle(
                             fontSize: 14, 
-                            color: Colors.black
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold
                           ),
                         ),
                       ),
@@ -59,11 +60,11 @@ class AppointmentCard extends StatelessWidget{
                     children: [
                       Text(
                         "Date : ${DateFormat('dd/MM/yyyy').format(appointment.dateTime)}",
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                        style: TextStyle(fontSize: 16, color: Colors.grey , fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "Time : ${DateFormat('HH:mm').format(appointment.dateTime)} - ${DateFormat('HH:mm').format(appointment.dateTime.add(Duration(hours: 1)))}",
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                        style: TextStyle(fontSize: 16, color: Colors.grey, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -72,7 +73,7 @@ class AppointmentCard extends StatelessWidget{
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(4),
                       ),
                       backgroundColor: Colors.black,
                     ),

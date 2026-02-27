@@ -11,7 +11,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(
+          'Home',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         actions: [  
           Padding(
             padding: EdgeInsets.all(8.0),
@@ -30,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Text(
                 'Welcome Abderahmane!',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w300, color: Colors.grey),
               ),
               SizedBox(height: 20),
               Row(
@@ -39,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                   Flexible(
                     child: Text(
                       "UPCOMING APPOINTMENTS",
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(width: 8),
@@ -50,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                     style: OutlinedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(4),
                       ),
                       backgroundColor: Colors.black,
                     ),
@@ -70,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return AppointmentCard(
                       appointment: Appointment(
-                        doctorName: "Dr. Smith", 
+                        doctorName: "Dr. Djoudi", 
                         doctorAvatarUrl: "assets/images/doctor.png", 
                         specialization: "Cardiology", 
                         dateTime: DateTime.now().add(Duration(days: index + 1)), 
@@ -87,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "MEDICATION REMINDERS",
                       style: TextStyle(
-                        fontSize: 16, 
+                        fontSize: 20, 
                         fontWeight: FontWeight.bold
                       ),
                     ),
@@ -108,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return MedicationReminderItem(
                       medicationName: "Medication ${index + 1}", 
-                      time: "08:00 AM"
+                      time: "08:00"
                     );
                   },
                 ),
@@ -117,7 +120,7 @@ class HomeScreen extends StatelessWidget {
               Text(
                 "SYMPTOM TRACKER",
                 style: TextStyle(
-                  fontSize: 16, 
+                  fontSize: 20, 
                   fontWeight: FontWeight.bold
                 ),
               ),

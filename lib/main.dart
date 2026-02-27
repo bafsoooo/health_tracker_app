@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_screen.dart';
 import 'screens/appointments_screen.dart';
 import 'screens/medications_screen.dart';
@@ -17,6 +18,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
+        cardTheme: CardThemeData(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          elevation: 2,
+        ),
+        textTheme: GoogleFonts.urbanistTextTheme(
+          Theme.of(context).textTheme,
+        ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           elevation: 0,

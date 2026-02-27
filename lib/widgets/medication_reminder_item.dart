@@ -52,7 +52,7 @@ class MedicationReminderItem extends StatelessWidget{
                     Icon(Icons.access_time, size: 14, color: Colors.grey),
                     SizedBox(width: 4),
                     Text(
-                      time,
+                      "Time : $time",
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                   ],

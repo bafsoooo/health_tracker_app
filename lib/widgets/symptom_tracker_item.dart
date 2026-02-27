@@ -22,8 +22,8 @@ class SymptomTrackerItem extends StatelessWidget {
                 children: [
                     // 1. grey Circle
                     Container(
-                      width: 35,
-                      height: 35,
+                      width: 25,
+                      height: 25,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.grey[200],
@@ -31,16 +31,16 @@ class SymptomTrackerItem extends StatelessWidget {
                     ),
                     // 2. The Center Icon/Image
                     Icon(
-                      Icons.sick, // Replace with your icon
+                      Icons.medication_rounded, // Replace with your icon
                       color: Colors.black,
-                      size: 25,
+                      size: 12,
                     ),
                   ],
                 ),
                 SizedBox(width: 16),
                 Text(
                   symptomName,
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                 ),  
               ],
             ),

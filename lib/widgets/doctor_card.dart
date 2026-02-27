@@ -38,7 +38,7 @@ class DoctorCard extends StatelessWidget {
                         child: Text(
                           appointment.specialization,
                           style: TextStyle(
-                            fontSize: 14, 
+                            fontSize: 10, 
                             color: Colors.black,
                             fontWeight: FontWeight.bold
                           ),
@@ -88,7 +88,7 @@ class DoctorCard extends StatelessWidget {
                     child: Text(
                       appointment.status.toString().split('.').last.toUpperCase(),
                       style: TextStyle(
-                        fontSize: 14, 
+                        fontSize: 12, 
                         color: Colors.black,
                         fontWeight: FontWeight.bold
                       ),
@@ -108,7 +108,12 @@ class DoctorCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ),
-                    child: Text("Cancel")
+                    child: Text(
+                      "Cancel",
+                      style: TextStyle(
+                        fontSize: 16
+                      ),
+                    )
                   ),
                   SizedBox(width: 10),
                   ElevatedButton(
@@ -122,7 +127,10 @@ class DoctorCard extends StatelessWidget {
                     ),
                     child: Text(
                       "Reschedule",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16
+                      ),
                     )
                   )
                 ],

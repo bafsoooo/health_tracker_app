@@ -32,7 +32,11 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+          titleTextStyle: GoogleFonts.urbanist(
+            color: Colors.black,
+            fontSize: 25,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
             backgroundColor: Colors.white,

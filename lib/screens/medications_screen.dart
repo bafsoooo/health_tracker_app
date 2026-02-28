@@ -10,7 +10,6 @@ class MedicationsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Medications',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         actions: [  
           Padding(

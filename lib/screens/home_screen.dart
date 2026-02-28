@@ -13,7 +13,6 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Home',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         actions: [  
           Padding(

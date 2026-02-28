@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/doctor.png
     - assets/images/avatar.png
+    - assets/images/user.png
     - assets/images/rate1.png
     - assets/images/rate2.png
 

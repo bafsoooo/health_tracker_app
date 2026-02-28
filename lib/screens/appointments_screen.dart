@@ -14,7 +14,6 @@ class AppointmentsScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'Appointments',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           actions: [  
             Padding(

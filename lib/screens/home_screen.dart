@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_tracker_app/models/appointment.dart';
+import 'package:health_tracker_app/utils/tab_notifications.dart';
 import 'package:health_tracker_app/widgets/appointment_card.dart';
 import 'package:health_tracker_app/widgets/medication_reminder_item.dart';
 import 'package:health_tracker_app/widgets/symptom_tracker_item.dart';
@@ -16,54 +17,59 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [  
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/images/avatar.png'),
+            padding: const EdgeInsets.all(8.0),
+            child: GestureDetector(
+              onTap: () {
+                TabChangeNotification(3).dispatch(context);
+              },
+              child:const CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage('assets/images/avatar.png'),
+              ),
             ),
           ),
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding:const  EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Welcome Abderahmane!',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w300, color: Colors.grey),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
-                    child: Text(
+                    child:const Text(
                       "UPCOMING APPOINTMENTS",
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   OutlinedButton(
                     onPressed: () {
-                      // Navigate to appointments screen
+                      TabChangeNotification(1).dispatch(context);
                     },
                     style: OutlinedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding:const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
+                        borderRadius:BorderRadius.circular(4),
                       ),
                       backgroundColor: Colors.black,
                     ),
-                    child: Text(
+                    child:const Text(
                       'Contact receptionist ',
                       style: TextStyle(fontSize: 10, color: Colors.white),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               SizedBox(
                 height: 170,
                 child: ListView.builder(
@@ -82,27 +88,32 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                    Text(
-                      "MEDICATION REMINDERS",
-                      style: TextStyle(
-                        fontSize: 20, 
-                        fontWeight: FontWeight.bold
-                      ),
+                  const Text(
+                    "MEDICATION REMINDERS",
+                    style: TextStyle(
+                      fontSize: 20, 
+                      fontWeight: FontWeight.bold
                     ),
-                    Text(
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      TabChangeNotification(2).dispatch(context);
+                    },
+                    child: Text(
                       "See all >",
                       style: TextStyle(
                         fontSize: 12, 
                         color: Colors.grey
                       ),
-                    )
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               SizedBox(
                 height: 180,
                 child: ListView.builder(
@@ -115,15 +126,15 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "SYMPTOM TRACKER",
                 style: TextStyle(
                   fontSize: 20, 
                   fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               SizedBox(
                 height: 180,
                 child: ListView(
@@ -134,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                       symptomIconPath: "assets/images/rate1.png", 
                       standardRate: 65.0
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     SymptomTrackerItem(
                       symptomName: "Blood Pressure", 
                       symptomIconPath: "assets/images/rate2.png", 

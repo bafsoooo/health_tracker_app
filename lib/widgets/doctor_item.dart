@@ -19,17 +19,17 @@ class DoctorItem extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Dr.Djoudi",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 2,horizontal: 8.0),
-                  decoration: BoxDecoration(
+                  padding:const EdgeInsets.symmetric(vertical: 2,horizontal: 8.0),
+                  decoration:const BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Cardiologist",
                     style: TextStyle(
                       fontSize: 10, 

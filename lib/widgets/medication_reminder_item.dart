@@ -18,42 +18,40 @@ class MedicationReminderItem extends StatelessWidget{
             Stack(
               alignment: Alignment.center,
               children: [
-                // 1. The Progress Circle
                 SizedBox(
-                  width: 50, // Size of the circle
+                  width: 50, 
                   height: 50,
                   child: CircularProgressIndicator(
-                    value: 0.7, // 70% progress
-                    strokeWidth: 8, // Thickness of the ring
-                    backgroundColor: Colors.grey[200], // The "empty" track color
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.black), // Progress color
-                    strokeCap: StrokeCap.round, // This creates the rounded ends
+                    value: 0.7, 
+                    strokeWidth: 8, 
+                    backgroundColor: Colors.grey[200], 
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.black), 
+                    strokeCap: StrokeCap.round, 
                   ),
                 ),
-                // 2. The Center Icon/Image
-                Icon(
-                  Icons.medication_rounded, // Replace with your icon
+                const Icon(
+                  Icons.medication_rounded, 
                   color: Colors.black,
                   size: 25,
                 ),
               ],
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   medicationName,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style:const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Row(
                   children: [
-                    Icon(Icons.access_time, size: 14, color: Colors.grey),
-                    SizedBox(width: 4),
+                    const Icon(Icons.access_time, size: 14, color: Colors.grey),
+                    const SizedBox(width: 4),
                     Text(
                       "Time : $time",
-                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                      style:const TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                   ],
                 ),

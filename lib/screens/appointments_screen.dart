@@ -12,12 +12,12 @@ class AppointmentsScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Appointments',
           ),
           actions: [  
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
                 radius: 20,
                 backgroundImage: AssetImage('assets/images/avatar.png'),

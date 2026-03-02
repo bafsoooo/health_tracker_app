@@ -20,7 +20,6 @@ class SymptomTrackerItem extends StatelessWidget {
               Stack(
                 alignment: Alignment.center,
                 children: [
-                    // 1. grey Circle
                     Container(
                       width: 25,
                       height: 25,
@@ -29,35 +28,34 @@ class SymptomTrackerItem extends StatelessWidget {
                         color: Colors.grey[200],
                       ),
                     ),
-                    // 2. The Center Icon/Image
-                    Icon(
-                      Icons.medication_rounded, // Replace with your icon
+                    const Icon(
+                      Icons.medication_rounded, 
                       color: Colors.black,
                       size: 12,
                     ),
                   ],
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Text(
                   symptomName,
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  style:const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                 ),  
               ],
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Image.asset(  
               symptomIconPath,
               width: 120,
               height: 50,
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Row(
               children: [
                 Text(
                   '$standardRate',
-                  style: TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  style:const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   'mm/g',
                   style: TextStyle(fontSize: 12, color: Colors.grey),
                 ),

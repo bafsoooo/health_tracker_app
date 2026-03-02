@@ -8,12 +8,12 @@ class MedicationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title:const Text(
           'Medications',
         ),
         actions: [  
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
               radius: 20,
               backgroundImage: AssetImage('assets/images/avatar.png'),
@@ -22,7 +22,7 @@ class MedicationsScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
           shrinkWrap: true,
           itemCount: 5,

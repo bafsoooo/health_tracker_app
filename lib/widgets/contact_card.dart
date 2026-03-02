@@ -27,9 +27,9 @@ class ContactCard extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Phone Number : ${user.phoneNumber}", style: TextStyle(fontSize: 12,color: Colors.grey),),
-            SizedBox(width: 5,),
-            Text("Address : ${user.address}", style: TextStyle(fontSize: 12,color: Colors.grey),),
+            Text("Phone Number : ${user.phoneNumber}", style: const TextStyle(fontSize: 12,color: Colors.grey),),
+            const SizedBox(width: 5,),
+            Text("Address : ${user.address}", style: const TextStyle(fontSize: 12,color: Colors.grey),),
           ],
         ), 
       ),

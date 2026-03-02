@@ -37,40 +37,40 @@ class _MedicationItemState extends State<MedicationItem> {
                       strokeCap: StrokeCap.round, 
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.medication_rounded, 
                     color: Colors.black,
                     size: 25,
                   ),
                 ],
               ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   widget.medicationName,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style:const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Row(
                   children: [
-                    Icon(Icons.access_time, size: 14, color: Colors.grey),
-                    SizedBox(width: 4),
-                    Text(
+                    const Icon(Icons.access_time, size: 14, color: Colors.grey),
+                    const SizedBox(width: 4),
+                    const Text(
                       "Time : 08:00 ",
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                   ],
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Row(
                   children: [
                     StatusCheckboxWidget(),
-                    Text("Taken",),
-                    SizedBox(width: 8),
+                    const Text("Taken",),
+                    const SizedBox(width: 8),
                     StatusCheckboxWidget(),
-                    Text("Missed"),
+                    const Text("Missed"),
                   ],
                 )
               ],
